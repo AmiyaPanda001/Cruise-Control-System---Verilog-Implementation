@@ -1,0 +1,105 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 5.00
+	-max_paths 3
+	-sort_by slack
+Design : cruise_control
+Version: O-2018.06-SP3
+Date   : Sun Nov 10 23:25:15 2019
+****************************************
+
+
+  Startpoint: cruise_set_speed_reg[3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cruise_set_speed[3]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cruise_set_speed_reg[3]/CLK (DFFPOSX1)                  0.00       0.00 r
+  cruise_set_speed_reg[3]/Q (DFFPOSX1)                    0.19       0.19 r
+  U519/Y (INVX1)                                          0.27       0.46 f
+  U518/Y (INVX8)                                          0.76       1.22 r
+  cruise_set_speed[3] (out)                               0.00       1.22 r
+  data arrival time                                                  1.22
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  output external delay                                  -5.00       5.00
+  data required time                                                 5.00
+  ------------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -1.22
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        3.78
+
+
+  Startpoint: cruise_set_speed_reg[4]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cruise_set_speed[4]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cruise_set_speed_reg[4]/CLK (DFFPOSX1)                  0.00       0.00 r
+  cruise_set_speed_reg[4]/Q (DFFPOSX1)                    0.19       0.19 r
+  U509/Y (INVX1)                                          0.24       0.44 f
+  U508/Y (INVX8)                                          0.75       1.19 r
+  cruise_set_speed[4] (out)                               0.00       1.19 r
+  data arrival time                                                  1.19
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  output external delay                                  -5.00       5.00
+  data required time                                                 5.00
+  ------------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -1.19
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        3.81
+
+
+  Startpoint: cruise_set_speed_reg[5]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cruise_set_speed[5]
+               (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cruise_set_speed_reg[5]/CLK (DFFPOSX1)                  0.00       0.00 r
+  cruise_set_speed_reg[5]/Q (DFFPOSX1)                    0.19       0.19 r
+  U521/Y (INVX1)                                          0.24       0.43 f
+  U520/Y (INVX8)                                          0.75       1.18 r
+  cruise_set_speed[5] (out)                               0.00       1.18 r
+  data arrival time                                                  1.18
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  output external delay                                  -5.00       5.00
+  data required time                                                 5.00
+  ------------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -1.18
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        3.82
+
+Warning: report_timing has satisfied the max_paths criteria. There are 31 further endpoints which have paths of interest with slack less than     5.00 that were not considered when generating this report. (UITE-502)
+
+1

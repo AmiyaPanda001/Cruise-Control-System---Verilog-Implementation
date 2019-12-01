@@ -1,0 +1,101 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-slack_lesser_than 5.00
+	-max_paths 3
+	-sort_by slack
+Design : cruise_control
+Version: O-2018.06-SP3
+Date   : Sun Nov 10 23:25:48 2019
+****************************************
+
+
+  Startpoint: reset (input port clocked by clk)
+  Endpoint: current_state_reg[2]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.02       0.02 f
+  U592/Y (INVX2)                                          0.09       0.11 r
+  current_state_reg[2]/R (DFFSR)                          0.00       0.11 r
+  data arrival time                                                  0.11
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  current_state_reg[2]/CLK (DFFSR)                                   0.00 r
+  library removal time                                    0.19       0.19
+  data required time                                                 0.19
+  ------------------------------------------------------------------------------
+  data required time                                                 0.19
+  data arrival time                                                 -0.11
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+  Startpoint: reset (input port clocked by clk)
+  Endpoint: current_state_reg[0]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.02       0.02 f
+  U592/Y (INVX2)                                          0.09       0.11 r
+  current_state_reg[0]/R (DFFSR)                          0.00       0.11 r
+  data arrival time                                                  0.11
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  current_state_reg[0]/CLK (DFFSR)                                   0.00 r
+  library removal time                                    0.19       0.19
+  data required time                                                 0.19
+  ------------------------------------------------------------------------------
+  data required time                                                 0.19
+  data arrival time                                                 -0.11
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+  Startpoint: reset (input port clocked by clk)
+  Endpoint: current_state_reg[1]
+               (removal check against rising-edge clock clk)
+  Path Group: **async_default**
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.02       0.02 f
+  U592/Y (INVX2)                                          0.09       0.11 r
+  current_state_reg[1]/R (DFFSR)                          0.00       0.11 r
+  data arrival time                                                  0.11
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  current_state_reg[1]/CLK (DFFSR)                                   0.00 r
+  library removal time                                    0.19       0.19
+  data required time                                                 0.19
+  ------------------------------------------------------------------------------
+  data required time                                                 0.19
+  data arrival time                                                 -0.11
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1

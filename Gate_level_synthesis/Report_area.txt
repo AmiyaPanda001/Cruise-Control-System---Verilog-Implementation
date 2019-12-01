@@ -1,0 +1,29 @@
+ 
+****************************************
+Report : area
+Design : cruise_control
+Version: O-2018.06-SP3
+Date   : Thu Nov  7 19:59:45 2019
+****************************************
+
+Library(s) Used:
+
+    iit018_stdcells (File: /home/grads/a/amiya_1/tutorial/syn/iit018_stdcells.db)
+
+Number of ports:                           58
+Number of nets:                           408
+Number of cells:                          357
+Number of combinational cells:            321
+Number of sequential cells:                31
+Number of macros/black boxes:               0
+Number of buf/inv:                         95
+Number of references:                      19
+
+Combinational area:               9362.000000
+Buf/Inv area:                     1928.000000
+Noncombinational area:            3216.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 12578.000000
+Total area:                 undefined
